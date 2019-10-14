@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -n "$1" ]; then
+	ssh-keygen -t rsa -b 4096 -N '' -q -f ~/.ssh/$1
+else
+	echo "No filename provided"
+	exit 1
+fi
