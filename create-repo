@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ c=`pwd`;
+ for r in "$@"; 
+ do 
+ 	mkdir -p "$r" && cd "$r" && git init; 
+ 	cd "$c"; 
+ done; 
